@@ -1,0 +1,100 @@
+<html>
+<head>
+    <link rel="stylesheet" href="indexCss.css">
+</head>
+<body style="background-color:#c0edd6;">
+  <div class="StyleForBackground">
+    <center>
+      <h1 class="StyleForWebName">Versatile Academy</h1>
+    </center>
+  </div>
+<center><form name="myform"><table border="2px" width=80% height=75% style="background-color:#e1f4ef" cellpadding="none">
+  <tr>
+    <td  rowspan="8" width=300px style="background-image:url('PICS/re2.jpg');" ></td>
+    <td colspan="2" style="color:#391e6e;font-size:35px;text-align:center">Admission form</td>
+    <td  rowspan="8" width=300px style="background-image:url('PICS/re2.jpg')" ></td>
+  </tr>
+  <tr>
+    <td height="60px" width="200px" style="color:solid black;font-size:25px;text-align:center">Name</td>
+    <td height="60px"><input type="text" id="name" style="color:solid black;font-size:25px;text-align:center"/><br><br></td>
+  </tr>
+  <tr>
+    <td height="60px" width="200px" style="color:solid black;font-size:25px;text-align:center">Gender</td>
+    <td height="60px" width="200px" style="color:solid black;font-size:25px"><input height="60px" width="200px" style="color:solid black;font-size:25px;" type="radio" name="gender" value="Male"/>male
+    <input height="60px" width="200px" style="color:solid black;font-size:25px;" type="radio" name="gender" value="FeMale"/>Female</td>
+  </tr>
+  <tr>
+    <td height="60px" width="200px" style="color:solid black;font-size:25px;text-align:center">Email</td>
+    <td><input height="60px" width="200px" style="color:solid black;font-size:25px;" type="text" id="mail"/><br><br></td>
+  </tr>
+  <tr>
+    <td height="60px" width="200px" style="color:solid black;font-size:25px;text-align:center">Contact number</td>
+    <td><input height="60px" width="200px" style="color:solid black;font-size:25px;" type="text" id="no"/><br><br></td>
+  </tr>
+  <tr>
+    <td height="60px" width="200px" style="color:solid black;font-size:25px;text-align:center">Courses offeredr</td>
+    <td height="60px" width="200px" style="color:solid black;font-size:25px">
+      <input type="checkbox" name="skill" value="Dance"/>Dance
+      <input type="checkbox" name="skill" value="yoga"/>Yoga
+      <input type="checkbox" name="skill" value="cooking"/>Cooking<br>
+      <input type="checkbox" name="skill" value="Singing"/>singing
+      <input type="checkbox" name="skill" value="Drawing"/>Drawing</td>
+  </tr>
+  <tr>
+    <td height="60px" width="200px" style="color:solid black;font-size:25px;text-align:center">Batch</td>
+    <td height="60px" width="200px" style="color:solid black;font-size:25px">
+      <select height="60px" width="200px" style="color:solid black;font-size:25px" name="batch" id="batch">
+        <option value="morning batch">Morning Batch</option>
+        <option value="evening batch">Evening Batch</option>
+      </select></td>
+  </tr>
+  <tr>
+    <td colspan="2" style="text-align:center">
+    <input style="color:#391e6e;font-size:25px;text-align:center;height:60px; width:250px" type="submit" value="Submit" onclick="formdata()"/>
+  </tr></table>
+</form></center>
+<footer>
+  <center><br>
+    <a style="text-decoration: none" href="index.html">Versatile Academy</a>
+  </center>
+  <p style="float:right">Developed by Ms.Vaishnavi</p>
+</footer>
+<script>
+function formdata()
+{
+  var genderLength= document.myform.gender.length;
+  var skillLength= document.myform.skill.length;
+  var indexed = document.myform.batch.selectedIndex;
+  var indexedValue= document.myform.batch.options[indexed].value;
+  var skillValue="";
+  for(i=0; i<genderLength; i++){
+    var checkedValue=document.myform.gender[i].checked;
+    if(checkedValue){
+      selectedButton=document.myform.gender[i].value;
+    }
+  }
+  for(j=0; j<skillLength; j++){
+    var skillChecked=document.myform.skill[j].checked;
+    if(skillChecked){
+      skillValue+=document.myform.skill[j].value+", ";
+    }
+  }
+  var name1= document.getElementById("name").value;
+  var result="Gender is  :" +selectedButton;
+  var mail1= document.getElementById("mail").value;
+  var no1= document.getElementById("no").value;
+  var result2="Your Skill is :" +skillValue;
+  var showdata="Your batch is "+indexedValue;
+  document.writeln("<h1>Confirmation Page</h1><br>");
+  document.writeln("Thank you for completing this form.<br><br>");
+  document.writeln("The first name you entered is " +name1 + "<br>");
+  document.writeln(result+"<br>");
+  document.writeln("The mail you entered is " +mail1 + "<br>");
+  document.writeln("The no you entered is " +no1 + "<br>");
+  document.writeln(result2+"<br>");
+  document.writeln(showdata);
+
+}
+</script>
+</body>
+</html>

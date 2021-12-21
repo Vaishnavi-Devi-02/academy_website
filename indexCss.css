@@ -1,0 +1,74 @@
+.StyleForBackground
+{
+  background-color:#c0edd6;
+  font-family:vaish1;
+}
+@font-face {
+  font-family: vaish1;
+  src:url("BigShouldersStencilDisplay-Bold.ttf");
+}
+.StyleForWebName
+{
+  color:#052040;
+  background-color:#98d7df;
+  font-size:50px
+
+}
+.StyleForMenuBar{
+  position:relative;
+  right:-500px;
+  top:10px;
+  text-decoration:none;
+  color:#306715;
+  font-size:30px;
+}
+.StyleForBeginners{
+  text-align:center;
+  font-size:40px;
+  background-image:url('resize_begin.jpg');
+}
+.StyleForAdavance{
+  text-align:center;
+  font-size:40px;
+  background-image:url('stage.jfif');
+}
+.StyleTextForBeginners
+{
+  color:#0b0b0b;
+  text-decoration:none;
+}
+.StyleTextForAdvance
+{
+  color:#fcfbf6;
+  text-decoration:none;
+}
+.StyleForDeveloper
+{
+  float:right;
+}
+@font-face {
+  font-family: vaish;
+  src:url("Lobster-Regular.ttf");
+}
+.wlcmtxt{
+  position:relative;
+  top:10px;
+  left:10px;
+  font-family: vaish;
+  padding: 10px;
+  font-size:30px;
+  text-align: center;
+  color:#00003b;
+}
+@media screen and (max-width:600px) {
+  .header{
+  width:100%;
+  padding: 0;
+  }
+  .StyleForMenuBar{
+  width:100%;
+  padding: 0;
+  position: relative;
+  left:100;
+  }
+}
